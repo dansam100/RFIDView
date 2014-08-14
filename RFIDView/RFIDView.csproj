@@ -1,0 +1,206 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A048D058-E755-4786-8C43-87627CC938E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFIDView</RootNamespace>
+    <AssemblyName>RFIDView</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iAnywhere.RfidNet.Core, Version=3.5.2.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Sybase\RFID Anywhere\bin\iAnywhere.RfidNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="iAnywhere.RfidNet.Rfid, Version=3.5.2.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Sybase\RFID Anywhere\bin\iAnywhere.RfidNet.Rfid.dll</HintPath>
+    </Reference>
+    <Reference Include="iAnywhere.RfidNet.Rfid.Multiprotocol, Version=3.5.2.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Sybase\RFID Anywhere\bin\iAnywhere.RfidNet.Rfid.Multiprotocol.dll</HintPath>
+    </Reference>
+    <Reference Include="iAnywhere.RfidNet.Rfid.Tags, Version=3.5.2.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Sybase\RFID Anywhere\bin\iAnywhere.RfidNet.Rfid.Tags.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect.Designer.cs">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connector.cs">
+    </Compile>
+    <Compile Include="DataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataForm.Designer.cs">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGrid.Designer.cs">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManager.cs" />
+    <Compile Include="EventData.cs" />
+    <Compile Include="GPIOBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPIOBox.Designer.cs">
+      <DependentUpon>GPIOBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GPIOPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPIOPanel.Designer.cs">
+      <DependentUpon>GPIOPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MonitorBar.Designer.cs">
+      <DependentUpon>MonitorBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanTextBox.Designer.cs">
+      <DependentUpon>PanTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDViewUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFIDViewUI.Designer.cs">
+      <DependentUpon>RFIDViewUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDView.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Connect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPIOPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GPIOPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFIDViewUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RFIDViewUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\iAnywhere.RfidNet.Core.RnErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\iAnywhere.RfidNet.Rfid.Multiprotocol.RfidMPEventArgs1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rounder.cs" />
+    <Compile Include="SideControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SideControl.Designer.cs">
+      <DependentUpon>SideControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SidePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SidePanel.Designer.cs">
+      <DependentUpon>SidePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Splitter.Designer.cs">
+      <DependentUpon>Splitter.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RFIDBModule\RFIDBModule\RFIDBModule.csproj">
+      <Project>{EB769734-6667-49AC-9F45-D8840EFD020A}</Project>
+      <Name>RFIDBModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\redx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
